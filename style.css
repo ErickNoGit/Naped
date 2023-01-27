@@ -1,0 +1,27 @@
+/* Linkando os css em cascata por ordem */
+/* css global */
+@import url("./assets/CSS/global/reset.css");
+@import url("./assets/CSS/global/utilitarios.css");
+@import url("./assets/CSS/global/header.css");
+@import url("./assets/CSS/global/footer.css");
+
+/* css home */
+@import url("./assets/CSS/home/main.css");
+@import url("./assets/CSS/home/article.css");
+@import url("./assets/CSS/");
+
+/* css notícias */
+@import url("./assets/CSS/");
+@import url("./assets/CSS/");
+@import url("./assets/CSS/");
+
+/* css animes */
+@import url("./assets/CSS/");
+@import url("./assets/CSS/");
+@import url("./assets/CSS/");
+@import url("./assets/CSS/");
+
+/* css found */
+@import url("./assets/CSS/");
+@import url("./assets/CSS/");
+@import url("./assets/CSS/");

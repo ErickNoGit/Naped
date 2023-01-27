@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: .3s;
+}
+
+img {
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+:root {
+  /* cores */
+  --purple: #8257E6;
+  --purple-100: #a179ff;
+  --purple-200: #6a47bb;
+
+  --white: #FEFBFB;
+  --white-100: #FFFFFF;
+  --white-200: #C4C4C4;
+
+  --gray: #282830;
+  --gray-100: #3b3b43;
+  --gray-200: #191920;
+
+  --dark: #13131F;
+  --dark-100: #181822;
+  --dark-200: #11111b;
+  /* fontes */
+  --inter: 'Inter';
+  --deca: 'Lexend Deca';
+}
