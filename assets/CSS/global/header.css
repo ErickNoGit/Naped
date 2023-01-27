@@ -1,0 +1,71 @@
+/* cabeçalho padãro das pag */
+
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+#acessos {
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+}
+
+#lista-btn {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.desativadoBtn {
+  font-family: var(--inter);
+  color: var(--white-200);
+  display: block;
+  padding: .7rem 0;
+  position: relative;
+}
+
+.ativadoBtn {
+  color: var(--white-100);
+  font-family: var(--inter);
+  display: block;
+  padding: .7rem 0;
+  position: relative;
+}
+
+.ativadoBtn:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--purple);
+  position: absolute;
+  bottom: 0;
+}
+
+/* botão para mobile */
+#btn-mobile {
+  display: none;
+}
+
+.btn-conta {
+  font-family: var(--deca);
+  border: solid 1px var(--purple);
+  color: var(--white);
+  font-size: .9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: .3s;
+  background: transparent;
+  padding: .5rem 1.3rem;
+  border-radius: 35px;
+}
+
+.btn-conta:hover {
+  border: solid 1px var(--purple-200);
+  color: var(--white-200);
+}

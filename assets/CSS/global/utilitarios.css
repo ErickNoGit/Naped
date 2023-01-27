@@ -1,0 +1,8 @@
+/* classes reutilizaveis para padronizar o site */
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--dark);
+  font-family: var(--deca);
+  color: var(--white);
+}
