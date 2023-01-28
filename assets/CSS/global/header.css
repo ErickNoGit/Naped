@@ -1,5 +1,4 @@
 /* cabeçalho padãro das pag */
-
 #navigation {
   display: flex;
   align-items: center;
@@ -35,6 +34,11 @@
   display: block;
   padding: .7rem 0;
   position: relative;
+}
+
+.ativadoBtn:hover,
+.desativadoBtn:hover {
+  text-decoration: none;
 }
 
 .ativadoBtn:after {
