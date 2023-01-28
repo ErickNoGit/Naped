@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   column-gap: 60px;
+  position: relative;
 }
 
 #lista-btn {
@@ -73,3 +74,73 @@
   border: solid 1px var(--purple-200);
   color: var(--white-200);
 }
+
+@media (max-width: 800px) {
+  .btn-conta {
+    display: none;
+  }
+
+  #btn-mobile {
+    display: flex;
+    height: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  #lista-btn {
+    display: none;
+  }
+
+  .linha {
+    display: block;
+    height: 2px;
+    width: 26px;
+    background: var(--white-100);
+    position: relative;
+  }
+
+  .linha::before,
+  .linha::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 26px;
+    background: var(--white);
+    position: absolute;
+  }
+
+  .linha::before {
+    top: 10px;
+  }
+
+  .linha::after {
+    margin-top: 20px;
+  }
+
+  /* remover traço purple */
+  .ativadoBtn:after {
+    display: none;
+  }
+
+  #acessos.ativado #lista-btn {
+    display: grid;
+    gap: 10px;
+    background: var(--dark);
+    position: absolute;
+    right: -2px;
+    top: 50px;
+    width: 200px;
+    z-index: 3;
+  }
+
+  #acessos.ativado #lista-btn li {
+    text-align: end;
+    border: double 1px var(--purple);
+    padding-right: 10px;
+  }
+  /* rotacionando hamburguer para X */
+  
+}
+
+/* @media (max-width: 600px) {} */
