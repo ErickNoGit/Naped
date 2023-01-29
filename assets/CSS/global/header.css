@@ -1,4 +1,4 @@
-/* cabeçalho padãro das pag */
+/* cabeçalho padrão das pag */
 #navigation {
   display: flex;
   align-items: center;
@@ -21,25 +21,19 @@
   column-gap: 40px;
 }
 
-.desativadoBtn {
-  font-family: var(--inter);
-  color: var(--white-200);
-  display: block;
-  padding: .7rem 0;
-  position: relative;
+#lista-btn li a {
+  padding: 1rem 0;
+}
+
+#lista-btn li a:hover {
+  text-decoration: none;
 }
 
 .ativadoBtn {
-  color: var(--white-100);
   font-family: var(--inter);
+  color: var(--white-100);
   display: block;
-  padding: .7rem 0;
   position: relative;
-}
-
-.ativadoBtn:hover,
-.desativadoBtn:hover {
-  text-decoration: none;
 }
 
 .ativadoBtn:after {
@@ -49,7 +43,7 @@
   height: 2px;
   background-color: var(--purple);
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
 }
 
 /* botão para mobile */
@@ -76,7 +70,11 @@
 }
 
 @media (max-width: 800px) {
-  .btn-conta {
+
+  /* escondendo */
+  .btn-conta,
+  .ativadoBtn:after,
+  #lista-btn {
     display: none;
   }
 
@@ -88,10 +86,26 @@
     cursor: pointer;
   }
 
-  #lista-btn {
-    display: none;
+  #acessos.ativado #lista-btn {
+    display: grid;
+    gap: 10px;
+    background: var(--dark);
+    border: solid 2px var(--purple);
+    padding: .5rem;
+    position: absolute;
+    right: -2px;
+    top: 50px;
+    width: 200px;
+    z-index: 5;
   }
 
+  #acessos.ativado #lista-btn li {
+    text-align: end;
+    border: double 1px var(--purple);
+    padding-right: 10px;
+  }
+
+  /* efeito hamburguer */
   .linha {
     display: block;
     height: 2px;
@@ -118,29 +132,16 @@
     margin-top: 20px;
   }
 
-  /* remover traço purple */
-  .ativadoBtn:after {
-    display: none;
+  #acessos.ativado .linha {
+    background: transparent;
   }
 
-  #acessos.ativado #lista-btn {
-    display: grid;
-    gap: 10px;
-    background: var(--dark);
-    position: absolute;
-    right: -2px;
-    top: 50px;
-    width: 200px;
-    z-index: 3;
+  #acessos.ativado .linha::after {
+    transform: rotate(45deg);
+    top: -10px;
   }
 
-  #acessos.ativado #lista-btn li {
-    text-align: end;
-    border: double 1px var(--purple);
-    padding-right: 10px;
+  #acessos.ativado .linha::before {
+    transform: rotate(-45deg);
   }
-  /* rotacionando hamburguer para X */
-  
 }
-
-/* @media (max-width: 600px) {} */

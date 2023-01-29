@@ -2,7 +2,12 @@
   display: grid;
   max-width: 1100px;
   margin: 3rem auto;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+#botao-minhaConta {
+  display: none;
 }
 
 #conteudo h1 {
@@ -20,4 +25,37 @@
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  #botao-minhaConta {
+    display: block;
+    font-family: var(--deca);
+    border: solid 1px var(--purple);
+    color: var(--white);
+    font-size: .9rem;
+    font-weight: 400;
+    cursor: pointer;
+    background: transparent;
+    padding: .5rem 3rem;
+    border-radius: 35px;
+    position: absolute;
+    top: -45px;
+    left: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #botao-minhaConta {
+    padding: .5rem;
+    left: auto;
+    position: inherit;
+    top: -30px;
+  }
+
+  #conteudo h1 {
+    max-width: max-content;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 }
