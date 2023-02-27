@@ -1,0 +1,163 @@
+.responsivo {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.conteudoDocs {
+  display: grid;
+  row-gap: 20px;
+  overflow-y: auto;
+}
+
+#listaDoc {
+  display: flex;
+  gap: 20px;
+}
+
+.containerImagem {
+  display: block;
+  max-width: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+  position: relative;
+}
+
+.containerImagem::after {
+  content: 'Novo';
+  display: block;
+  width: 40px;
+  height: 20px;
+  padding: .1rem 1rem .2rem;
+  border-radius: 4px;
+  font-family: var(--deca);
+  color: var(--white-100);
+  background-color: var(--purple);
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+#ordenadoTxt {
+  display: grid;
+  font-family: var(--inter);
+}
+
+#ordenadoTxt li:nth-child(1) {
+  font-size: .9rem;
+  color: var(--white);
+  font-family: var(--deca);
+  font-weight: 400;
+}
+
+#ordenadoTxt li:nth-child(2),
+#ordenadoTxt li:nth-child(3) {
+  font-size: .7rem;
+  max-width: 330px;
+  font-weight: 400;
+  color: var(--white-200);
+  font-family: var(--inter);
+}
+
+.lerNoticiaBtn {
+  display: block;
+  max-width: max-content;
+  padding: .3rem 1.2rem;
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--white-100);
+  background-color: var(--purple);
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: .3s;
+}
+
+.lerNoticiaBtn:hover {
+  background: var(--purple-100);
+}
+
+.assinantes {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#conteudoAssinantes {
+  display: block;
+}
+
+.assinantes h2 {
+  font-family: var(--deca);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-bottom: .5rem;
+  position: relative;
+}
+
+.assinantes h2::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 200px;
+  background-color: var(--purple);
+  position: absolute;
+  bottom: 0;
+}
+
+.assinantes div {
+  display: grid;
+  align-items: end;
+  height: 250px;
+  padding: 0;
+  border-radius: 5px;
+  margin: 20px 0 40px;
+  position: relative;
+  /* herdar */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.assinantes div::after {
+  content: 'Novo';
+  width: 40px;
+  height: 20px;
+  background-color: var(--purple);
+  color: var(--white);
+  font-family: var(--deca);
+  font-weight: 600;
+  padding: .1rem 1rem;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.assinados1 {
+  background-image: url('../../IMG/principais/Dragaozela.png');
+}
+
+.assinados2 {
+  background-image: url('../../IMG/principais/Cientista.png');
+}
+
+.assinados3 {
+  background-image: url('../../IMG/principais/Kratos.png');
+}
+
+.assinantes div a {
+  padding: 0 1rem;
+  font-family: var(--deca);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: linear-gradient(360deg, #13131F 0%, rgba(19, 19, 31, 0) 100%);
+}
